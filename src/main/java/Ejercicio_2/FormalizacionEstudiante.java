@@ -21,41 +21,15 @@ public class FormalizacionEstudiante {
     }
     public ArrayList<Estudiante>  consultarMaterias(Integer id){
 
-        //public int buscarCliente(String r){
-            int index = -1;
-            int bound = estudiante.size();
-            for (int userInd = 0; userInd < bound; userInd++) {
-                if (estudiante.get(userInd).nombre.equals(id)) {
-                    index = userInd;
-                    break;
-                }
-            }
-            //return index;
-    }
 
-      /*  for(Estudiante estudiante1: estudiante){
+        for(Estudiante estudiante1: estudiante){
             if(estudiante1.equals(id))
                 if(estudiante.get(4).equals("No tiene"))
                     return null;
         }
 
-            return this.estudiante;*/
+            return this.estudiante;
 
-
-
-  /*  public void inscribir(Integer id, String nombreMateria){
-        materia.add(nombreMateria);
-        if(estudiante.get(0).equals(id)){
-            //estudiante.addAll(inscribirMateria(nombreMateria));
-            //Collections.addAll(estudiante,inscribirMateria(nombreMateria));
-            //List<String> list = new ArrayList<>();
-            //Stream.of(estudiante, materia).forEach(list::addAll);
-        }
 
     }
-    public ArrayList<String> inscribirMateria (String data){
-        ArrayList<String> materia = new ArrayList<>();
-        materia.add(data);
-        return materia;
-    }*/
 }
