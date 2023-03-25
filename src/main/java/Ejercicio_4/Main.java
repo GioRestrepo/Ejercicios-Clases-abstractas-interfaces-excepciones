@@ -5,10 +5,9 @@ public class Main {
           CuentaDeAhorros cuentaDeAhorros = new CuentaDeAhorros(2000,1213, "Luis Velez");
           CuentaCorriente cuentaCorriente = new CuentaCorriente(4000,5214, "Pedro Jimenez");
 
-        System.out.println(cuentaDeAhorros.saldo);
-          cuentaDeAhorros.consignarDinero(2000);
-        System.out.println(cuentaDeAhorros.saldo);
+        System.out.println("Cuenta de ahorros");
 
+        System.out.println(cuentaDeAhorros.saldo);
         cuentaDeAhorros.consignarDinero(2000);
         System.out.println(cuentaDeAhorros.saldo);
 
@@ -18,7 +17,7 @@ public class Main {
         cuentaDeAhorros.consignarDinero(2000);
         System.out.println(cuentaDeAhorros.saldo);
 
-        cuentaDeAhorros.retirarDinero(2000);
+        cuentaDeAhorros.consignarDinero(2000);
         System.out.println(cuentaDeAhorros.saldo);
 
         cuentaDeAhorros.retirarDinero(2000);
@@ -33,9 +32,11 @@ public class Main {
         cuentaDeAhorros.retirarDinero(2000);
         System.out.println(cuentaDeAhorros.saldo);
 
+        cuentaDeAhorros.retirarDinero(2000);
+        System.out.println(cuentaDeAhorros.saldo);
 
-      /*  cuentaCorriente.retirarDinero(100);
-        System.out.println(cuentaCorriente.saldo);
+        System.out.println("Cuenta corriente");
+
         cuentaCorriente.retirarDinero(100);
         System.out.println(cuentaCorriente.saldo);
         cuentaCorriente.retirarDinero(100);
@@ -47,7 +48,9 @@ public class Main {
         cuentaCorriente.retirarDinero(100);
         System.out.println(cuentaCorriente.saldo);
         cuentaCorriente.retirarDinero(100);
-        System.out.println(cuentaCorriente.saldo);*/
+        System.out.println(cuentaCorriente.saldo);
+        cuentaCorriente.retirarDinero(100);
+        System.out.println(cuentaCorriente.saldo);
 
 
 
