@@ -7,15 +7,22 @@ public class Estudiante {
     private String nombre;
     private int edad;
     private int curso;
-    private String materia;
+    private ArrayList<String> materia;
 
-    public Estudiante(int identificacion, String nombre, int edad, int curso, String materia) {
+    public Estudiante(int identificacion, String nombre, int edad, int curso) {
+        this.identificacion = identificacion;
+        this.nombre = nombre;
+        this.edad = edad;
+        this.curso = curso;
+        materia = new ArrayList<>();
+    }
+
+    public Estudiante(int identificacion, String nombre, int edad, int curso, ArrayList<String> materia) {
         this.identificacion = identificacion;
         this.nombre = nombre;
         this.edad = edad;
         this.curso = curso;
         this.materia = materia;
-
     }
 
     public int getIdentificacion() {
@@ -31,5 +38,13 @@ public class Estudiante {
                 ", curso=" + curso +
                 ", materia='" + materia + '\'' +
                 '}';
+    }
+
+    public void InscribirMaterias(ArrayList<String> materias){
+        this.materia.addAll(materias);
+    }
+
+    public void InscribirMateria(String materia){
+        this.materia.add(materia);
     }
 }

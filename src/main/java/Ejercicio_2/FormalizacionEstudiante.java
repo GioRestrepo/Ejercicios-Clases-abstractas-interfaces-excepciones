@@ -3,33 +3,38 @@ package Ejercicio_2;
 import java.util.ArrayList;
 
 public class FormalizacionEstudiante {
-    private ArrayList<Estudiante> estudiante;
+    private ArrayList<Estudiante> estudiantes;
 
     public FormalizacionEstudiante(){
-        this.estudiante = new ArrayList<>();
-
+        this.estudiantes = new ArrayList<>();
     }
     public void incribirEstudiante(Estudiante data){
-        //estudiante =new Estudiante(data);
-        estudiante.add(data);
+        estudiantes.add(data);
+    }
+
+    public void incribirMateriaEstudiante(int id, String materia){
+        for (Estudiante  estudiante: estudiantes) {
+            if(estudiante.getIdentificacion() == id){
+                estudiante.InscribirMateria(materia);
+            }
+        }
     }
 
     public void imprimirListado(){
-        for (Estudiante estudiante:estudiante) {
-            System.out.println(estudiante);
+        for (Estudiante estudiante: estudiantes) {
+            System.out.println(estudiante.toString());
         }
     }
-    public ArrayList<Estudiante>  consultarMaterias(Integer id){
 
+    public Estudiante  consultarMateriasPorEstudiante(int id){
+        Estudiante estudianteEncontrado = null;
 
-        for(Estudiante estudiante1: estudiante){
-            if(estudiante1.equals(id))
-                if(estudiante.get(4).equals("No tiene"))
-                    return null;
+        for (Estudiante  estudiante: estudiantes) {
+            if(estudiante.getIdentificacion() == id){
+                estudianteEncontrado = estudiante;
+            }
         }
 
-            return this.estudiante;
-
-
+        return estudianteEncontrado;
     }
 }
