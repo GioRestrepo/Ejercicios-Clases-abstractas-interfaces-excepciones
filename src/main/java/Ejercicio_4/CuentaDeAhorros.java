@@ -11,11 +11,13 @@ public class CuentaDeAhorros extends CuentaBancaria{
     public void consignarDinero(float dinero) {
         if (dinero > 0) {
             if(dinero > 0 && numeroDeConsignaciones<2){
-                this.saldo += dinero + (dinero*0.02);
+                //float dineroprop = this.saldo;
+                this.saldo += (dinero + (dinero*0.05));
                 this.numeroDeConsignaciones++;
-            }
+            }else{
             this.saldo += dinero;
             this.numeroDeConsignaciones++;
+            }
         }
 
 

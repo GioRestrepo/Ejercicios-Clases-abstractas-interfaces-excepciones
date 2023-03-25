@@ -34,6 +34,9 @@ public class FormalizacionEstudiante {
                 estudianteEncontrado = estudiante;
             }
         }
+        if(estudianteEncontrado==null){
+            throw new RuntimeException("Estudiante no encontrado");
+        }
 
         return estudianteEncontrado;
     }
